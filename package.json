@@ -1,0 +1,22 @@
+{
+  "name": "demal",
+  "version": "0.0.1",
+  "description": "demado portable config language",
+  "main": "index.js",
+  "scripts": {
+    "test": "jest"
+  },
+  "repository": "git+https://github.com/otiai10/demal.git",
+  "keywords": [
+    "demado"
+  ],
+  "author": "otiai10",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/otiai10/demal/issues"
+  },
+  "homepage": "https://github.com/otiai10/demal#readme",
+  "dependencies": {
+    "jest-cli": "^19.0.2"
+  }
+}
