@@ -15,4 +15,15 @@ describe('Demal', () => {
       });
     });
   });
+  describe('static serialize', () => {
+    it('should serialize dict to demal string', () => {
+      const str = Demal.serialize({
+        u: 'http://google.com?query=foo',
+        s: {w:520, h:338},
+        o: {l: 80, t:  0},
+        z: 1,
+      });
+      expect(str).toBe(`u|http://google.com?query=foo,s.w|520,s.h|338,o.l|80,o.t|0,z|1`);
+    });
+  });
 });

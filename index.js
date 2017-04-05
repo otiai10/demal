@@ -30,6 +30,18 @@ module.exports = (function() {
     if (val.match(/[0-9]+\.?[0-9]*/)) return parseFloat(val);
     return val;
   }
+  Demal.serialize = function(dict) {
+    return Object.keys(dict).map(function(key) {
+      return Demal._getString(key, dict[key]);
+    }).join(',');
+  };
+  Demal._getString = function(key, value, prefix) {
+    if (typeof value == 'object') return Object.keys(value).map(function(k) {
+      return Demal._getString(k, value[k], key);
+    }).join(',');
+    var k = prefix ? [prefix, key].join('.') : key;
+    return [k, value].join('|');
+  };
   Demal.prototype.json = function() {
     return this.dict;
   };
