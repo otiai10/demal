@@ -30,7 +30,7 @@ module.exports = (function() {
     case 'true': return  true;
     case 'false': return false;
     }
-    if (val.match(/[0-9]+\.?[0-9]*/)) return parseFloat(val);
+    if (val.match(/^[0-9]+\.?[0-9]*$/)) return parseFloat(val);
     return val;
   }
   Demal.serialize = function(dict) {
