@@ -1,6 +1,6 @@
 {
   "name": "demal",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "description": "demado portable config language",
   "main": "index.js",
   "scripts": {
